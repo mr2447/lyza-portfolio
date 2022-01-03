@@ -4,11 +4,20 @@ import '@testing-library/jest-dom/extend-expect';
 
 import About from '..';
 
+const categories = [
+    { name: 'portraits', description: 'Portraits of people in my life' }
+]
+const mockCurrentCategory = jest.fn();
+const mockSetCurrentCategory = jest.fn();
+
 afterEach(cleanup)
 describe('About component', ()=> {
     //First test
     it('renders', ()=> {
-        render(<About />);
+        render(<About 
+            categories={categories}
+            setCurrentCategory={mockSetCurrentCategory}
+            currentCategory={mockCurrentCategory}/>);
     });
     //Second test
     test('matches snapshot DOM node structure', () => {
