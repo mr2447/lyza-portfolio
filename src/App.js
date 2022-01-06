@@ -20,7 +20,7 @@ function App() {
       description: 'Delicious delicacies'
     },
     {
-      name: 'landscapr',
+      name: 'landscape',
       description: 'Fields, farmhouses, waterfalls, and the beauty of nature'
     }
   ]);
